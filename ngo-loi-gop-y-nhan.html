@@ -16,82 +16,201 @@
                             800: '#92400e', 900: '#78350f',
                         },
                     },
+                    fontFamily: {
+                        'chirp': ['-apple-system', 'BlinkMacSystemFont', 'Chirp', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
                 },
             },
         };
     </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Chirp', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        @media print {
+            .print\:hidden { display: none; }
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
-    <div class="max-w-3xl mx-auto p-8 bg-white shadow-md mt-6 mb-12">
-        <div class="border-b-4 border-amber-600 pb-4 mb-6 flex items-center gap-3">
-            <span class="text-4xl">🎫</span>
-            <div>
-                <h1 class="text-3xl font-bold text-gray-800">MAGASIN COFFEE</h1>
-                <p class="text-sm text-gray-500">Điều kiện áp dụng voucher</p>
+<body class="bg-gray-100 font-chirp">
+    <div class="max-w-5xl mx-auto p-4 md:p-8 bg-white">
+        <!-- Header -->
+        <div class="border-b-4 border-amber-600 pb-4 mb-8">
+            <div class="flex items-start justify-between gap-4">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl md:text-2xl font-bold text-gray-800">MAGASIN COFFEE</h1>
+                    <p class="text-xs text-gray-500">Điều kiện áp dụng voucher</p>
+                </div>
             </div>
         </div>
 
-        <div class="bg-amber-50 p-6 rounded-lg mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-2">📌 ĐIỀU KIỆN ÁP DỤNG “NGỎ LỜI GÓP Ý – NHẬN QUÀ HẾT Ý”</h2>
-            <p class="text-gray-600 text-sm">Vui lòng đọc kỹ trước khi sử dụng voucher ưu đãi.</p>
+        <!-- Tiêu đề chương trình -->
+        <div class="bg-gradient-to-r from-amber-50 to-amber-100 p-4 md:p-6 rounded-lg mb-8 border-l-4 border-amber-600 text-center">
+            <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">📌 NGỎ LỜI GÓP Ý – NHẬN QUÀ HẾT Ý</h2>
+                            <p class="text-sm md:text-base text-gray-600">Vui lòng đọc kỹ các điều kiện áp dụng trước khi sử dụng voucher ưu đãi.</p>
         </div>
 
+        <!-- 1. Phạm vi áp dụng -->
         <section class="mb-6">
-            <h3 class="text-xl font-bold text-gray-800 mb-2">🎁 1. Phạm vi & hình thức áp dụng</h3>
-            <ul class="text-gray-700 text-sm space-y-1">
-                <li>• Áp dụng trực tiếp tại tất cả cửa hàng MAGASIN COFFEE.</li>
-                <li>• Áp dụng khi khách <strong>nộp lại voucher giấy</strong> cho nhân viên thu ngân.</li>
-            </ul>
+            <div class="border-l-4 border-amber-600 bg-amber-50 p-4 md:p-6 rounded-r-lg">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    <span>🎁</span>
+                    1. PHẠM VI & HÌNH THỨC ÁP DỤNG
+                </h3>
+                <div class="bg-white p-4 rounded-lg border border-amber-200">
+                    <ul class="space-y-3 text-sm md:text-base text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-amber-600 font-bold min-w-[8px]">•</span>
+                            <span>Áp dụng <strong>trực tiếp tại tất cả cửa hàng MAGASIN COFFEE</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-amber-600 font-bold min-w-[8px]">•</span>
+                            <span>Áp dụng khi khách <strong>nộp lại voucher giấy</strong> cho nhân viên thu ngân</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
+        <!-- 2. Sản phẩm áp dụng -->
         <section class="mb-6">
-            <h3 class="text-xl font-bold text-gray-800 mb-2">🧋 2. Sản phẩm được áp dụng</h3>
-            <ul class="text-gray-700 text-sm space-y-1">
-                <li>• Chỉ áp dụng cho nhóm <strong>TRÀ SỮA</strong>.</li>
-                <li>• Không áp dụng cho cà phê, soda, trà trái cây, topping lẻ, combo hoặc sản phẩm khác.</li>
-            </ul>
+            <div class="border-l-4 border-blue-600 bg-blue-50 p-4 md:p-6 rounded-r-lg">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    <span>🧋</span>
+                    2. SẢN PHẨM ĐƯỢC ÁP DỤNG
+                </h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-green-50 p-4 rounded-lg border-2 border-green-300">
+                        <p class="font-semibold text-green-900 mb-2">✅ Được áp dụng:</p>
+                        <ul class="text-sm text-green-800 space-y-1">
+                            <li>• Chỉ áp dụng cho nhóm <strong>TRÀ SỮA</strong></li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded-lg border-2 border-red-300">
+                        <p class="font-semibold text-red-900 mb-2">❌ Không áp dụng:</p>
+                        <ul class="text-sm text-red-800 space-y-1">
+                            <li>• Cà phê, soda, trà trái cây</li>
+                            <li>• Topping lẻ, combo khuyến mãi</li>
+                            <li>• Các sản phẩm khác</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- 3. Thời hạn sử dụng -->
         <section class="mb-6">
-            <h3 class="text-xl font-bold text-gray-800 mb-2">⏳ 3. Thời hạn sử dụng</h3>
-            <ul class="text-gray-700 text-sm space-y-1">
-                <li>• Voucher có giá trị <strong>07 ngày kể từ ngày nhận</strong>.</li>
-                <li>• Có thể thay đổi thành 10 hoặc 14 ngày theo quy định từng thời điểm.</li>
-            </ul>
+            <div class="border-l-4 border-green-600 bg-green-50 p-4 md:p-6 rounded-r-lg">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    <span>⏳</span>
+                    3. THỜI HẠN SỬ DỤNG
+                </h3>
+                <div class="bg-white p-4 rounded-lg border border-green-200">
+                    <ul class="space-y-3 text-sm md:text-base text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-600 font-bold min-w-[8px]">•</span>
+                            <span>Voucher có giá trị <strong>07 ngày kể từ ngày nhận</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-600 font-bold min-w-[8px]">•</span>
+                            <span>Thời hạn có thể điều chỉnh thành <strong>10 hoặc 14 ngày</strong> theo quy định từng thời điểm</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-600 font-bold min-w-[8px]">•</span>
+                            <span>Voucher hết hạn sẽ <strong>không được gia hạn</strong> dưới mọi hình thức</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
+        <!-- 4. Quy định sử dụng -->
         <section class="mb-6">
-            <h3 class="text-xl font-bold text-gray-800 mb-2">🧾 4. Quy định sử dụng</h3>
-            <ul class="text-gray-700 text-sm space-y-1">
-                <li>• Mỗi voucher chỉ dùng cho <strong>01 ly</strong>.</li>
-                <li>• Không áp dụng nhiều voucher trong cùng 1 hóa đơn.</li>
-                <li>• Không áp dụng chung với các chương trình khuyến mãi khác.</li>
-                <li>• Voucher không quy đổi thành tiền mặt hoặc trừ vào sản phẩm khác.</li>
-                <li>• Voucher đã dùng sẽ được thu lại để đối chiếu.</li>
-            </ul>
+            <div class="border-l-4 border-purple-600 bg-purple-50 p-4 md:p-6 rounded-r-lg">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    <span>🧾</span>
+                    4. QUY ĐỊNH SỬ DỤNG
+                </h3>
+                <div class="bg-white p-4 rounded-lg border border-purple-200">
+                    <ul class="space-y-3 text-sm md:text-base text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-purple-600 font-bold min-w-[24px]">1.</span>
+                            <span>Mỗi voucher chỉ sử dụng cho <strong>01 ly trà sữa</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-purple-600 font-bold min-w-[24px]">2.</span>
+                            <span><strong>Không áp dụng nhiều voucher</strong> trong cùng 1 hóa đơn</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-purple-600 font-bold min-w-[24px]">3.</span>
+                            <span><strong>Không áp dụng chung</strong> với các chương trình khuyến mãi khác</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-purple-600 font-bold min-w-[24px]">4.</span>
+                            <span>Voucher <strong>không quy đổi thành tiền mặt</strong> hoặc trừ vào sản phẩm khác</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-purple-600 font-bold min-w-[24px]">5.</span>
+                            <span>Voucher đã sử dụng sẽ được <strong>thu lại để đối chiếu</strong></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section class="mb-6">
-            <h3 class="text-xl font-bold text-gray-800 mb-2">🔒 5. Quy định chống lạm dụng – gian lận</h3>
-            <ul class="text-gray-700 text-sm space-y-1">
-                <li>• Voucher rách, mờ, photo, scan hoặc sửa đổi thông tin → <strong>không hợp lệ</strong>.</li>
-                <li>• Không áp dụng nếu khách quên mang voucher.</li>
-                <li>• Voucher chỉ hợp lệ khi có <strong>mã và ngày phát đúng thể lệ</strong>.</li>
-                <li>• Nhân viên phải kiểm tra ly khách order có đúng nhóm TRÀ SỮA.</li>
-            </ul>
+        <!-- 5. Thời điểm áp dụng -->
+        <section class="mb-8">
+            <div class="border-l-4 border-orange-600 bg-orange-50 p-4 md:p-6 rounded-r-lg">
+                <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    <span>🛑</span>
+                    5. THỜI ĐIỂM ÁP DỤNG
+                </h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded-lg border border-orange-200">
+                        <p class="font-semibold text-orange-900 mb-3">✅ Được áp dụng:</p>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• Tất cả các ngày trong tuần</li>
+                            <li>• Tất cả khung giờ hoạt động</li>
+                            <li>• Áp dụng trước khi thanh toán</li>
+                        </ul>
+                    </div>
+                    <div class="bg-orange-100 p-4 rounded-lg border-2 border-orange-400">
+                        <p class="font-semibold text-orange-900 mb-3">❌ Không áp dụng:</p>
+                        <ul class="space-y-2 text-sm text-orange-800">
+                            <li>• Sau khi hóa đơn đã thanh toán</li>
+                            <li>• Các ngày sale lớn: 10.10, 11.11, Black Friday, Noel</li>
+                            <li>• <strong>Trừ khi có thông báo riêng từ MAGASIN</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="mb-6">
-            <h3 class="text-xl font-bold text-gray-800 mb-2">🛑 6. Thời điểm áp dụng</h3>
-            <ul class="text-gray-700 text-sm space-y-1">
-                <li>• Không áp dụng sau khi hóa đơn đã thanh toán.</li>
-                <li>• Không áp dụng trong các ngày <strong>sale lớn</strong> (10.10, 11.11, Noel...) trừ khi có thông báo riêng.</li>
-            </ul>
+        <!-- Lưu ý -->
+        <section class="mb-8">
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border-l-4 border-blue-600 text-center">
+                <p class="text-sm md:text-base text-blue-900">
+                    💬 <strong>Nếu có thắc mắc, vui lòng liên hệ nhân viên để được hỗ trợ</strong>
+                </p>
+            </div>
         </section>
 
-        <div class="mt-10 pt-6 border-t text-center text-gray-600 text-sm">
-            <p><strong>MAGASIN COFFEE</strong> – Chân thành cảm ơn góp ý của bạn!</p>
-            <p class="text-xs text-gray-500 mt-1">Mỗi ý kiến của bạn giúp chúng tôi phục vụ tốt hơn mỗi ngày.</p>
+        <!-- Footer -->
+        <div class="mt-10 pt-6 border-t-2 border-gray-300 text-center">
+            <div class="bg-gradient-to-r from-amber-50 to-orange-50 p-6 rounded-lg">
+                <p class="text-lg md:text-xl font-bold text-gray-800 mb-2">
+                    <strong>MAGASIN COFFEE</strong>
+                </p>
+                <p class="text-sm md:text-base text-gray-600 mb-1">
+                    Chân thành cảm ơn góp ý của bạn!
+                </p>
+                <p class="text-xs md:text-sm text-gray-500">
+                    Mỗi ý kiến của bạn giúp chúng mình phục vụ tốt hơn mỗi ngày. ❤️
+                </p>
+            </div>
+            <p class="mt-6 text-xs text-gray-500">
+                Tài liệu này thuộc quyền sở hữu của MAGASIN COFFEE | Cập nhật: Tháng 11/2025
+            </p>
         </div>
     </div>
 </body>
